@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Baloo+Bhaijaan+2&family=EB+Garamond&family=Joan&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1vh;
+}
+
+/* Navbar */
+nav {
+    height: 2.5em;
+    background-color: black;
+    color: white;
+    font-size: 3em;
+    display: flex;
+    font-family: 'Joan', serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+    font-size: 2.5em;
+    position: relative;
+}
+
+/* game Container */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Anton', sans-serif;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0vw;
+    position: absolute;
+    border-radius: 2em;
+    transition: width 1s ease-in-out;
+}
+
+/* Utility classes for removing borders. */
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+/* Game information container */
+.game-info-container {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+}
+
+.img-box img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#reset {
+    padding: 0.4em 2em;
+    background-color: rgb(212, 129, 212);
+    border-radius: 3em;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.7vw;
+    font-family: 'EB Garamond', serif;
+}
+
+/* Media queries for Mobile and tablets */
+@media screen and (max-width: 1000px) {
+    .game-info-container {
+        font-size: 1.5vw;
+    }
+
+    #reset {
+        padding: 0.3em 1.3em;
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .game-container {
+        grid-template-columns: repeat(3, 12vw);
+        grid-template-rows: repeat(3, 12vw);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(3, 18vw);
+        grid-template-rows: repeat(3, 18vw);
+    }
+
+    .game-info-container {
+        margin-top: 3em;
+        font-size: 2.5vw;
+    }
+
+    #reset {
+        padding: 0.4em 3.5em;
+        font-size: 2.8vw;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .game-container {
+        grid-template-columns: repeat(3, 25vw);
+        grid-template-rows: repeat(3, 25vw);
+    }
+
+    #reset {
+        padding: 0.4em 3.5em;
+        font-size: 4vw;
+    }
+
+    .game-info-container {
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width: 300px) {
+}
